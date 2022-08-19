@@ -9,7 +9,7 @@ const { verifyToken } = require("../middleware/auth");
 //#########################################Create Database#######################################################
 router.get("/createDb", (req, res) => {
   try {
-    let sql = "CREATE DATABASE how";
+    let sql = "CREATE DATABASE files";
     mysqlConnection.query(sql, (err, result) => {
       console.log(result);
       return res.status(201).send("Database created");
